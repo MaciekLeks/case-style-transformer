@@ -1,0 +1,22 @@
+*.tfvars
+*.tfstate*
+.terraform/
+**/inspec.lock
+terraform.tfstate.d/
+.idea/
+*.iml
+kubeconfig_*
+*.swp
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lockfile
+.terraform.lock.hcl
+
+#  Crash log files
+crash.log
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
