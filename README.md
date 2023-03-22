@@ -32,7 +32,7 @@ output "output" {
   value = module.affinity_transformer.output
 }
 /* Expected output
-node_affinity = {
+   nodeAffinity = {
       preferredDuringSchedulingIgnoredDuringExecution = [
         {
           weight     = 1
@@ -68,10 +68,11 @@ node_affinity = {
   b. the code inside main
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
-| Name | Version |
-|------|---------|
+| Name                                                                      | Version  |
+|---------------------------------------------------------------------------|----------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.7 |
 
 ## Providers
@@ -88,14 +89,15 @@ No resources.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_input"></a> [input](#input\_input) | Input HCL object to be transformed | `any` | n/a | yes |
-| <a name="input_type"></a> [type](#input\_type) | Transformation | `string` | `"snake_case>camelCase"` | no |
+| Name                                              | Description                        | Type     | Default                  | Required |
+|---------------------------------------------------|------------------------------------|----------|--------------------------|:--------:|
+| <a name="input_input"></a> [input](#input\_input) | Input HCL object to be transformed | `any`    | n/a                      |   yes    |
+| <a name="input_type"></a> [type](#input\_type)    | Transformation                     | `string` | `"snake_case>camelCase"` |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_output"></a> [output](#output\_output) | n/a |
+| Name                                                   | Description |
+|--------------------------------------------------------|-------------|
+| <a name="output_output"></a> [output](#output\_output) | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
