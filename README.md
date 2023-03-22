@@ -59,13 +59,13 @@ output "output" {
     ```hcl
     some_key = "some_value"
     ```
-  it meanse, after transformation you get
+  ends up with:
     ```hcl
     someKey = "someValue"
     ```
   Please have a look at:
   a. [re2 syntax](https://github.com/google/re2/wiki/Syntax)
-  b. the code inside main
+  b. the code inside main.tf
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
