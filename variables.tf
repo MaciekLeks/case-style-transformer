@@ -6,10 +6,10 @@ variable "input" {
 variable "type" {
   description = "Transformation"
   type        = string
-  default     = "snake_case>camelCase"
+  default     = "camelCase"
 
   validation {
-    condition     = contains(["snake_case>camelCase"], var.type)
-    error_message = "Module supports only [\"snake_case>camelCase\"] right now."
+    condition     = contains(["camelCase", "kebab-case"], var.type)
+    error_message = "Module supports [\"camelCase\", \"kebab-case\"]."
   }
 }

@@ -91,7 +91,7 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_input"></a> [input](#input\_input) | Input HCL object to be transformed | `any` | n/a | yes |
-| <a name="input_type"></a> [type](#input\_type) | Transformation | `string` | `"snake_case>camelCase"` | no |
+| <a name="input_type"></a> [type](#input\_type) | Transformation | `string` | `"camelCase"` | no |
 
 ## Outputs
 
