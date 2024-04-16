@@ -14,7 +14,12 @@ locals {
 
   in_tokens = split("_", local.in)
 
-  in_camel_case_tokens = join("", [for i, kv in local.in_tokens : i == 0 ? kv : "${title(substr(kv, 0, 1))}${substr(kv, 1, length(kv))}"])
+  //in_camel_case_tokens = join("", [for i, kv in local.in_tokens : i == 0 ? kv : "${title(substr(kv, 0, 1))}${substr(kv, 1, length(kv))}"])
 
-  out = jsondecode(local.in_camel_case_tokens)
+  //in_kebab_case_tokens = join("", [for i, kv in local.in_tokens : i == 0 ? kv : "-${substr(kv, 0, length(kv))}"])
+
+  str = var.type == "camelCase" ? join("", [for i, kv in local.in_tokens : i == 0 ? kv : "${title(substr(kv, 0, 1))}${substr(kv, 1, length(kv))}"]) : var.type == "kebab-case" ? join("", [for i, kv in local.in_tokens : i == 0 ? kv : "-${substr(kv, 0, length(kv))}"]) : ""
+
+  //out = jsondecode(local.in_camel_case_tokens)
+  out = jsondecode(local.str)
 }
